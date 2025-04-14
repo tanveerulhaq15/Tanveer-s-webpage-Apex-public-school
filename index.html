@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Public School, Sopore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #ede7f6);
+      color: #333;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header {
+      background: linear-gradient(to right, #6a1b9a, #512da8);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.4em;
+      margin: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 2s ease-in-out;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+    .section h2 {
+      color: #512da8;
+      margin-bottom: 15px;
+      border-left: 6px solid #9575cd;
+      padding-left: 12px;
+      font-size: 1.8em;
+    }
+    .section p, .section ul {
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .teachers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .teacher-card {
+      flex: 1 1 45%;
+      background: #f3e5f5;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+    .teacher-card:hover {
+      transform: scale(1.02);
+      background: #ede7f6;
+    }
+    .teacher-card img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+    }
+    .rating-section input[type="number"] {
+      width: 80px;
+      padding: 10px;
+      border: 2px solid #9575cd;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    .rating-section button {
+      background: #512da8;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .rating-section button:hover {
+      background: #6a1b9a;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #512da8;
+      color: white;
+      margin-top: 60px;
+      font-size: 1.1em;
+      border-top: 6px solid #b39ddb;
+    }
+  </style>
+  <script>
+    function submitRating() {
+      const rating = document.getElementById('userRating').value;
+      if (rating >= 1 && rating <= 5) {
+        alert('Thanks for rating Apex Public School ' + rating + '/5!');
+      } else {
+        alert('Please enter a rating between 1 and 5.');
+      }
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Apex Public School, Sopore</h1>
+  <p>Near Fruit Mandi, Sopore - Nurturing Tomorrow's Leaders with Excellence</p>
+</header>
+
+<div class="container">
+  <div class="section">
+    <h2>About Us</h2>
+    <p>Apex Public School, Sopore was established in 2012 with the dream of redefining education through innovation, care, and cultural values. Nestled near Fruit Mandi Sopore, our school aims to foster growth, creativity, and discipline in every student.</p>
+  </div>
+
+  <div class="section">
+    <h2>Key Information</h2>
+    <p><strong>Founded:</strong> October 2012</p>
+    <p><strong>Owner:</strong> Apex Educational Trust</p>
+    <p><strong>Contact:</strong> +91-8493001114 | apexkashmir@gmail.com</p>
+    <p><strong>Website:</strong> <a href="http://www.apexkashmir.com" target="_blank">www.apexkashmir.com</a></p>
+  </div>
+
+  <div class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.m5wVy9XOZIylmMw5tmot1AHaEK&pid=Api" alt="School Event">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.p40_DG9yJ_EFLLsGGqzKAAHaEK&pid=Api" alt="School Building">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Our Inspirational Teachers</h2>
+    <div class="teachers">
+      <div class="teacher-card">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.XHlzTVQRg3c1Nrq5jlbQ5gHaF1&pid=Api" alt="Mr. Meharaj - English Teacher">
+        <h3>Mr. Meharaj</h3>
+        <p>Mr. Meharaj is not just an English teacher, he is an inspiration. His unique way of explaining complex literature makes every student fall in love with language. His soft-spoken nature, Islamic values, and ever-smiling face make him a role model. He makes learning feel like a journey of wisdom and joy.</p>
+      </div>
+      <div class="teacher-card">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.X5ANxrbtTtYyAzb5q8DU6gHaFW&pid=Api" alt="Ms. Mizna Shah - Computer Teacher">
+        <h3>Ms. Mizna Shah</h3>
+        <p>Ms. Mizna Shah is the backbone of our tech education. Her ability to simplify programming and digital skills is phenomenal. She encourages students to explore the digital world and become creators, not just users. Her positivity and leadership have inspired many, including me, to love technology with confidence and creativity.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Chairman - Mr. Ruhail Nazir Shah</h2>
+    <div class="teacher-card">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.qMCAPWpfnN_DhGf4UST4HAHaHa&pid=Api" alt="Chairman Ruhail Nazir Shah">
+      <h3>Mr. Ruhail Nazir Shah</h3>
+      <p>Mr. Ruhail Nazir Shah, the esteemed Chairman of Apex Public School, Sopore, is a visionary leader committed to educational excellence. Under his guidance, the school has flourished, emphasizing holistic development and academic rigor. His approachable demeanor and unwavering dedication inspire both staff and students alike. Mr. Shah's strategic initiatives have positioned the school as a beacon of quality education in the region.</p>
+    </div>
+  </div>
+
+  <div class="section rating-section">
+    <h2>School Ratings & Recognitions</h2>
+    <ul>
+      <li><strong>iCBSE Rating:</strong> 4.2/5 based on 11 reviews, reflecting strong academic performance and infrastructure.</li>
+      <li><strong>AmbitionBox Reviews:</strong> 4.5/5 rating, indicating a supportive work environment and effective management.</li>
+    </ul>
+    <p>These accolades underscore the school's commitment to excellence and its reputation among educational institutions.</p>
+    <p><strong>Rate our school:</strong></p>
+    <input type="number" id="userRating" min="1" max="5" placeholder="1-5">
+    <button onclick="submitRating()">Submit Rating</button>
+  </div>
+
+  <div class="section">
+    <h2>About the Developer</h2>
+    <p>This beautiful and professional webpage was developed by <strong>Tanveer ul Haq</strong>, a passionate student of Class 8 at Apex Public School, Sopore. Tanveer got inspired by the school’s excellent environment and supportive teachers, especially Ms. Mizna Shah, to start learning web development. His creativity and dedication are reflected in this stunning webpage that aims to make the school shine on the digital front.</p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Apex Public School, Sopore. Designed with passion to inspire the world.</p>
+</footer>
+
+</body>
+</html>
